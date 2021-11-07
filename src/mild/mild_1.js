@@ -9,11 +9,14 @@
  * see https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals
  */
 export function sumToString(a, b) {
+    /*
     aString = a.toString();
     bString = b.toString();
     ab = a + b;
     abString = ab.toString();
     return aString + ' + ' + bString + ' = ' + 'abString'
+    */
+    return `${a} + ${b} = ${a + b}`
 }
 
 
