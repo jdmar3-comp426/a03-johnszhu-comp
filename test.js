@@ -63,7 +63,7 @@ console.log(removeKey(objec, 'password'));
 console.log(objec);
 
 //testing removeKeys
-/*console.log('Testing removeKeys');
+console.log('Testing removeKeys');
 let ob = {
     name: 'Mr. Boss',
     title: 'boss',
@@ -73,4 +73,4 @@ let ob = {
  console.log(ob);
  console.log(removeKeys(ob, ['password', 'age']));
  console.log(ob);
- */
+ 
