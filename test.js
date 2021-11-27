@@ -32,5 +32,6 @@ console.log('Testing identifyVariable(blubber)');
 console.log(identifyVariable("blubber"));
 console.log('Testing identifyVariable(null)');
 console.log(identifyVariable(null));
-console.log('Testing identifyVariable(x)');
-console.log(identifyVariable(x));
+
+
+//testing identifyArray
