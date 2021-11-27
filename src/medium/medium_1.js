@@ -84,12 +84,13 @@ export function getStatistics(array) {
     }
     var variance = varSum / array.length;
     var length = array.length;
-    if (length % 2 == 1) {
+    if ((length % 2) == 1) {
         //odd length
         median = array[(array.length)/2 - .5];
     }
     else {
-        var median = array[(array.length)/2 - .5];
+        //even length
+        var median = array[(array.length)/2];
     }
     var standard_deviation = Math.sqrt(variance);
     return {
