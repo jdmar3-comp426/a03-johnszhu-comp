@@ -69,7 +69,7 @@ export function getStatistics(array) {
         return 0;
     });
     var min = array[0];
-    var median = getMedian(array);
+    var median = 999999999
     var max = array[array.length-1];
     var sum = 0;
     for (let i=0; i<array.length; i++) {
@@ -84,7 +84,24 @@ export function getStatistics(array) {
     }
     var variance = varSum / array.length;
     var length = array.length;
+    if (length % 2 == 1) {
+        //odd length
+        median = array[(array.length)/2 - .5];
+    }
+    else {
+        var median = array[(array.length)/2 - .5];
+    }
     var standard_deviation = Math.sqrt(variance);
-    return min, median, max, variance, mean, length, sum, standard_deviation;
+    return {
+        min: min,
+        median: median,
+        max: max,
+        variance: variance,
+        mean: mean,
+        length: length,
+        sum: sum,
+        standard_deviation: standard_deviation
+    }
+
 }
 
