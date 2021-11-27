@@ -94,15 +94,15 @@ export function getStatistics(array) {
     }
     var standard_deviation = Math.sqrt(variance);
     return {
-        min: min,
-        median: median,
-        max: max,
-        variance: variance,
-        mean: mean,
         length: length,
         sum: sum,
+        mean: mean,
+        median: median,
+        min: min,
+        max: max,
+        variance: variance,
         standard_deviation: standard_deviation
-    }
+    };
 
 }
 
