@@ -3,7 +3,7 @@ import {sumToString} from "./src/mild/mild_1.js";
 import {getIncreasingArray} from "./src/mild/mild_1.js";
 import {countArray} from "./src/mild/mild_1.js";
 import {maxAndMin} from "./src/mild/mild_1.js";
-import {identifyVariable, removeKey} from "./src/mild/mild_2.js";
+import {identifyVariable, removeKey, removeKeys} from "./src/mild/mild_2.js";
 import {identifyArray} from "./src/mild/mild_2.js";
 
 //testing sumToString
@@ -61,3 +61,16 @@ console.log('Testing removeKeyNondestructive(objec, password)');
 console.log(objec);
 console.log(removeKey(objec, 'password'));
 console.log(objec);
+
+//testing removeKeys
+/*console.log('Testing removeKeys');
+let ob = {
+    name: 'Mr. Boss',
+    title: 'boss',
+    age: 33,
+    password: 'pass123'
+ };
+ console.log(ob);
+ console.log(removeKeys(ob, ['password', 'age']));
+ console.log(ob);
+ */
