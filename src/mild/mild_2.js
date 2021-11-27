@@ -29,7 +29,12 @@ export function identifyVariable(variable) {
 
  */
 export function identifyArray(array) {
-
+   let counter = [];
+   for (let i=0; i<array.length; i++) {
+      counter[i] = {type: typeof array[i], value: array[i]}
+   }
+   //counter[item] = {type: typeof item, value: item}
+   return counter
 }
 
 /**

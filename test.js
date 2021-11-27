@@ -3,7 +3,8 @@ import {sumToString} from "./src/mild/mild_1.js";
 import {getIncreasingArray} from "./src/mild/mild_1.js";
 import {countArray} from "./src/mild/mild_1.js";
 import {maxAndMin} from "./src/mild/mild_1.js";
-import {identifyVariable} from "./src/mild/mild_2.js"
+import {identifyVariable} from "./src/mild/mild_2.js";
+import {identifyArray} from "./src/mild/mild_2.js";
 
 //testing sumToString
 console.log('Testing sumToString(3,4) :');
@@ -33,5 +34,6 @@ console.log(identifyVariable("blubber"));
 console.log('Testing identifyVariable(null)');
 console.log(identifyVariable(null));
 
-
 //testing identifyArray
+console.log('Testing identifyArray(["some", 3, [3, 4], false])');
+console.log(identifyArray(['some', 3, [3, 4], false]));
