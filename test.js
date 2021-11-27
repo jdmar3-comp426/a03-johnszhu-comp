@@ -49,3 +49,15 @@ console.log('Testing removeKey(obj, password)');
 console.log(obj);
 console.log(removeKey(obj, 'password'));
 console.log(obj);
+
+//testing removeKeyNondestructive
+let objec = {
+    name: 'Mr. Boss',
+    title: 'boss',
+    age: 33,
+    password: 'pass123'
+};
+console.log('Testing removeKeyNondestructive(objec, password)');
+console.log(objec);
+console.log(removeKey(objec, 'password'));
+console.log(objec);
