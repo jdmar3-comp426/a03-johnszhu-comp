@@ -22,7 +22,7 @@ see under the methods section
 //avgMpg
 let cityTotal = 0;
 let highwayTotal = 0;
-for (let i=0; i<mpg_data.length -1; i++) {
+for (let i=0; i<mpg_data.length; i++) {
     cityTotal = cityTotal + mpg_data[i].city_mpg;
     highwayTotal = highwayTotal + mpg_data[i].highway_mpg;
 }
@@ -30,12 +30,12 @@ let cityAverage = cityTotal/mpg_data.length;
 let highAverage = highwayTotal/mpg_data.length;
 //allYearStats
 let yearArray = [];
-for (let i=0; i<mpg_data.length -1; i++) {
+for (let i=0; i<mpg_data.length; i++) {
     yearArray[i] = mpg_data[i].year;
 }
 //ratioHybrids
 let hybridCount = 0;
-for (let i=0; i<mpg_data.length -1; i++) {
+for (let i=0; i<mpg_data.length; i++) {
     if (mpg_data[i].hybrid) {
         hybridCount++;
     }
