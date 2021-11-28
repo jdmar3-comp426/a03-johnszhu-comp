@@ -6,6 +6,7 @@ import {maxAndMin} from "./src/mild/mild_1.js";
 import {identifyVariable, removeKey, removeKeys} from "./src/mild/mild_2.js";
 import {identifyArray} from "./src/mild/mild_2.js";
 import {getStatistics} from "./src/medium/medium_1.js";
+import { allCarStats } from "./src/medium/medium_2.js";
 
 //testing sumToString
 console.log('Testing sumToString(3,4) :');
@@ -78,3 +79,7 @@ let ob = {
 //testing getStatistics
 console.log('Testing getStatistics');
 console.log(getStatistics([3,2,4,5,5,5,2,6,7]));
+
+//testing allCarStats
+console.log('Testing allCarStats');
+console.log(allCarStats);

@@ -19,11 +19,35 @@ see under the methods section
  *
  * @param {allCarStats.ratioHybrids} ratio of cars that are hybrids
  */
+//avgMpg
+let cityTotal = 0;
+let highwayTotal = 0;
+for (let i=0; i<mpg_data.length -1; i++) {
+    cityTotal = cityTotal + mpg_data[i].city_mpg;
+    highwayTotal = highwayTotal + mpg_data[i].highway_mpg;
+}
+let cityAverage = cityTotal/mpg_data.length;
+let highAverage = highwayTotal/mpg_data.length;
+//allYearStats
+let yearArray = [];
+for (let i=0; i<mpg_data.length -1; i++) {
+    yearArray[i] = mpg_data[i].year;
+}
+//ratioHybrids
+let hybridCount = 0;
+for (let i=0; i<mpg_data.length -1; i++) {
+    if (mpg_data[i].hybrid) {
+        hybridCount++;
+    }
+}
+let hybridRatio = hybridCount/mpg_data.length;
+
 export const allCarStats = {
-    avgMpg: undefined,
-    allYearStats: undefined,
-    ratioHybrids: undefined,
+    avgMpg: {city: cityAverage, highway: highAverage},
+    allYearStats: getStatistics(yearArray),
+    ratioHybrids: hybridRatio,
 };
+
 
 
 /**
