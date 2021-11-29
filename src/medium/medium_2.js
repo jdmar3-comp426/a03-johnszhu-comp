@@ -107,7 +107,29 @@ export const allCarStats = {
  *
  * }
  */
+
+//makerHybrids, make and id, sort by number of hybrids
+//array holds only hybrids
+let hybridsOnly = mpg_data.filter(car => car.hybrid = true);
+
+let modelResults = hybridsOnly.reduce((prev, current) => {
+    
+    const found = prev.find(existing => existing.make === current.make);
+    
+    if (!found) {
+        prev.push({make: current.make, hybrids: [current.id]});
+    }
+    else {
+        found.hybrids.push(current.id);
+        //console.log(found); for some reason this outputs the right stuff when you output it
+    }
+    return prev;
+}, []);
+//avgMpgByYearAndHybrid
+
+
+
 export const moreStats = {
-    makerHybrids: undefined,
+    makerHybrids: modelResults,
     avgMpgByYearAndHybrid: undefined
 };

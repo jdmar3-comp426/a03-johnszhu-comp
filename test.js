@@ -6,7 +6,9 @@ import {maxAndMin} from "./src/mild/mild_1.js";
 import {identifyVariable, removeKey, removeKeys} from "./src/mild/mild_2.js";
 import {identifyArray} from "./src/mild/mild_2.js";
 import {getStatistics} from "./src/medium/medium_1.js";
-import { allCarStats } from "./src/medium/medium_2.js";
+import { allCarStats, moreStats } from "./src/medium/medium_2.js";
+import { searchByYear, searchHighPower } from "./src/medium/medium_3.js";
+import mpg_data from "./src/medium/data/mpg_data.js";
 
 //testing sumToString
 console.log('Testing sumToString(3,4) :');
@@ -83,3 +85,11 @@ console.log(getStatistics([3,2,4,5,5,5,2,6,7]));
 //testing allCarStats
 console.log('Testing allCarStats');
 console.log(allCarStats);
+
+//testing moreStats
+console.log('Testing moreStats');
+console.log(moreStats);
+
+//testing searchHighPower
+console.log('Testing searchHighPower');
+console.log(searchHighPower(mpg_data, 250, 250));
