@@ -20,7 +20,6 @@ queries.
 
 export function searchHighPower(car_data, minHorsepower, minTorque) {
     //find all cars in the correct range using two filters
-
     let underHorseRemoved = car_data.filter(car => car.horsepower >= minHorsepower);
     let filtered = underHorseRemoved.filter(car => car.torque >= minTorque);
     
@@ -50,7 +49,22 @@ export function searchHighPower(car_data, minHorsepower, minTorque) {
  *
  */
 export function searchMpg(car_data, minCity, minHighway) {
+//find all cars in the correct range using two filters
+let underCityRemoved = car_data.filter(car => car.city_mpg >= minCity);
+let filtered = underCityRemoved.filter(car => car.highway_mpg >= minHighway);
 
+//sort by horse power
+filtered.sort((a,b) => {
+    if (a.highway_mpg>b.highway_mpg) {
+        return 1;
+    }
+    if (a.highway_mpg<b.highway_mpg) {
+        return -1;
+    }
+    return 0;
+})
+
+return filtered;
 }
 
 

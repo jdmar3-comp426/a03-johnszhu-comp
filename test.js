@@ -7,7 +7,7 @@ import {identifyVariable, removeKey, removeKeys} from "./src/mild/mild_2.js";
 import {identifyArray} from "./src/mild/mild_2.js";
 import {getStatistics} from "./src/medium/medium_1.js";
 import { allCarStats, moreStats } from "./src/medium/medium_2.js";
-import { searchByYear, searchHighPower } from "./src/medium/medium_3.js";
+import { searchByYear, searchHighPower, searchMpg } from "./src/medium/medium_3.js";
 import mpg_data from "./src/medium/data/mpg_data.js";
 
 //testing sumToString
@@ -93,3 +93,7 @@ console.log(moreStats);
 //testing searchHighPower
 console.log('Testing searchHighPower');
 console.log(searchHighPower(mpg_data, 250, 250));
+
+//testing searchMpg
+console.log('Testing searchMPG');
+console.log(searchMpg(mpg_data, 20, 26));
