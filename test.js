@@ -9,6 +9,7 @@ import {getStatistics} from "./src/medium/medium_1.js";
 import { allCarStats, moreStats } from "./src/medium/medium_2.js";
 import { searchByYear, searchHighPower, searchMpg } from "./src/medium/medium_3.js";
 import mpg_data from "./src/medium/data/mpg_data.js";
+import {searchName} from "./src/medium/medium_3.js";
 
 //testing sumToString
 console.log('Testing sumToString(3,4) :');
@@ -97,3 +98,7 @@ console.log(searchHighPower(mpg_data, 250, 250));
 //testing searchMpg
 console.log('Testing searchMPG');
 console.log(searchMpg(mpg_data, 20, 26));
+
+//testing searchName
+console.log('Testing searchName');
+console.log(searchName(mpg_data, 'audi'));

@@ -77,7 +77,8 @@ return filtered;
  * @returns {[]} array of cars
  */
 export function searchName(car_data, searchTerm) {
-
+    let filtered = car_data.filter(car => (car.id.toLowerCase()).includes(searchTerm.toLowerCase()));
+    return filtered;
 }
 
 
