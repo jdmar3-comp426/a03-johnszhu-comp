@@ -102,3 +102,7 @@ console.log(searchMpg(mpg_data, 20, 26));
 //testing searchName
 console.log('Testing searchName');
 console.log(searchName(mpg_data, 'audi'));
+
+//testing searchYear
+console.log('Testing searchYear');
+console.log(searchByYear(mpg_data, [2012, 2013, 2014]));
