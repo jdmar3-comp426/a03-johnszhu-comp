@@ -10,6 +10,7 @@ import { allCarStats, moreStats } from "./src/medium/medium_2.js";
 import { searchByYear, searchHighPower, searchMpg } from "./src/medium/medium_3.js";
 import mpg_data from "./src/medium/data/mpg_data.js";
 import {searchName} from "./src/medium/medium_3.js";
+import { repeat, repeatDemo } from "./src/spicy/spicy_9.js";
 
 //testing sumToString
 console.log('Testing sumToString(3,4) :');
@@ -106,3 +107,7 @@ console.log(searchName(mpg_data, 'audi'));
 //testing searchYear
 console.log('Testing searchYear');
 console.log(searchByYear(mpg_data, [2012, 2013, 2014]));
+
+//testing repeat
+console.log('Testing repeat');
+console.log(repeat(repeatDemo, 10));
