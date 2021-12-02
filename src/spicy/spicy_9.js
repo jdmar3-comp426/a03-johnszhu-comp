@@ -188,7 +188,7 @@ export function isOdd (num) {
 }
 
 export const allEvensAreOdd = (arr) => {
-    everyEven(arr, isOdd);
+    return everyEven(arr, isOdd);
 };
 
 
