@@ -10,7 +10,7 @@ import { allCarStats, moreStats } from "./src/medium/medium_2.js";
 import { searchByYear, searchHighPower, searchMpg } from "./src/medium/medium_3.js";
 import mpg_data from "./src/medium/data/mpg_data.js";
 import {searchName} from "./src/medium/medium_3.js";
-import { multiplyBy, repeat, repeatDemo } from "./src/spicy/spicy_9.js";
+import { multiplyBy, repeat, repeatDemo, tenTimes, tenTimesFifty } from "./src/spicy/spicy_9.js";
 
 //testing sumToString
 console.log('Testing sumToString(3,4) :');
@@ -112,11 +112,19 @@ console.log(searchByYear(mpg_data, [2012, 2013, 2014]));
 console.log('Testing repeat');
 console.log(repeat(repeatDemo, 10));
 
-//testing multiplyBy
-console.log('Testing multiplyBy(2)');
-console.log(multiplyBy(2));
-
 //testing repeatDemo
 console.log('Testing repeatDemo');
 repeatDemo();
+
+//testing multiplyBy
+console.log('Testing multiplyBy(2)');
+console.log(multiplyBy(2)(3));
+
+//testing tenTimes
+console.log('Testing tenTimes')
+console.log(tenTimes(10));
+
+//testing tentimefifty
+console.log('Testing tenTimesFifty');
+console.log(tenTimesFifty());
 
