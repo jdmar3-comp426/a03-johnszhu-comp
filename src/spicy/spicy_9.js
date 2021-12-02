@@ -17,7 +17,6 @@
 export const repeat = (fn, n, ...params) => {
     let results = [];
     for (let i=0; i<n; i++) {
-        
         results[i] = fn(...params);
     }
     return results;
@@ -29,7 +28,7 @@ export const repeat = (fn, n, ...params) => {
  *   10 times.
  */
 export const repeatDemo = () => {
-    return repeat (function hello () {return "Hello, world!"}, 10);
+    
 };
 
 
@@ -123,7 +122,14 @@ export const everyEven = (arr, test) => {
  *    someEven([0, 0, 0, 0, 0], x => x === 0)  <--  returns true
  */
 export const someEven = (arr, test) => {
-
+    for (let i=0; i<arr.length; i++) {
+        if (i%2 == 0) {
+            if(test(arr[i])) {
+                return true;
+            }
+        }
+    }
+    return false;
 };
 
 
