@@ -93,12 +93,12 @@ export const tenTimesFifty = () => {
 export const everyEven = (arr, test) => {
     for (let i=0; i<arr.length; i++) {
         if (i%2 == 0) {
-            if(test(arr[i])) {
-                return true;
+            if(!test(arr[i])) {
+                return false;
             }
         }
     }
-    return false;
+    return true;
 };
 
 
@@ -179,12 +179,7 @@ export const filter = (arr, test) => {
  *   odd numbers. Use the "everyEven" function in this function.
  */
 export const allEvensAreOdd = (arr) => {
-    for (let i=0; i<arr.length; i++) {
-        if (!(arr[i]%2 == 0)) {
-            return false;
-        }
-    }
-    return true;
+    
 };
 
 
@@ -194,7 +189,7 @@ export const allEvensAreOdd = (arr) => {
  *   array is an odd number. Use the "someEven" function in this function.
  */
 export const anEvenIsOdd = (arr) => {
-
+    
 };
 
 
