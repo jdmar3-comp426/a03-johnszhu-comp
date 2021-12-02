@@ -115,3 +115,7 @@ console.log(repeat(repeatDemo, 10));
 //testing multiplyBy
 console.log('Testing multiplyBy(2)');
 console.log(multiplyBy(2));
+
+//testing repeatDemo
+console.log('Testing repeatDemo');
+console.log(repeatDemo);
