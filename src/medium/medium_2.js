@@ -19,11 +19,35 @@ see under the methods section
  *
  * @param {allCarStats.ratioHybrids} ratio of cars that are hybrids
  */
+//avgMpg
+let cityTotal = 0;
+let highwayTotal = 0;
+for (let i=0; i<mpg_data.length; i++) {
+    cityTotal = cityTotal + mpg_data[i].city_mpg;
+    highwayTotal = highwayTotal + mpg_data[i].highway_mpg;
+}
+let cityAverage = cityTotal/mpg_data.length;
+let highAverage = highwayTotal/mpg_data.length;
+//allYearStats
+let yearArray = [];
+for (let i=0; i<mpg_data.length; i++) {
+    yearArray[i] = mpg_data[i].year;
+}
+//ratioHybrids
+let hybridCount = 0;
+for (let i=0; i<mpg_data.length; i++) {
+    if (mpg_data[i].hybrid) {
+        hybridCount++;
+    }
+}
+let hybridRatio = hybridCount/mpg_data.length;
+
 export const allCarStats = {
-    avgMpg: undefined,
-    allYearStats: undefined,
-    ratioHybrids: undefined,
+    avgMpg: {city: cityAverage, highway: highAverage},
+    allYearStats: getStatistics(yearArray),
+    ratioHybrids: hybridRatio,
 };
+
 
 
 /**
@@ -83,7 +107,29 @@ export const allCarStats = {
  *
  * }
  */
+
+//makerHybrids, make and id, sort by number of hybrids
+//array holds only hybrids
+let hybridsOnly = mpg_data.filter(car => car.hybrid = true);
+
+let modelResults = hybridsOnly.reduce((prev, current) => {
+    
+    const found = prev.find(existing => existing.make === current.make);
+    
+    if (!found) {
+        prev.push({make: current.make, hybrids: [current.id]});
+    }
+    else {
+        found.hybrids.push(current.id);
+        //console.log(found); for some reason this outputs the right stuff when you output it
+    }
+    return prev;
+}, []);
+//avgMpgByYearAndHybrid
+
+
+
 export const moreStats = {
-    makerHybrids: undefined,
+    makerHybrids: modelResults,
     avgMpgByYearAndHybrid: undefined
 };

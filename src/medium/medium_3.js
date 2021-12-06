@@ -17,8 +17,24 @@ queries.
  * sorted by horsepower in descending order.
  *
  */
-export function searchHighPower(car_data, minHorsepower, minTorque) {
 
+export function searchHighPower(car_data, minHorsepower, minTorque) {
+    //find all cars in the correct range using two filters
+    let underHorseRemoved = car_data.filter(car => car.horsepower >= minHorsepower);
+    let filtered = underHorseRemoved.filter(car => car.torque >= minTorque);
+    
+    //sort by horse power
+    filtered.sort((a,b) => {
+        if (a.horsepower>b.horsepower) {
+            return 1;
+        }
+        if (a.horsepower<b.horsepower) {
+            return -1;
+        }
+        return 0;
+    })
+
+    return filtered;
 }
 
 
@@ -33,7 +49,22 @@ export function searchHighPower(car_data, minHorsepower, minTorque) {
  *
  */
 export function searchMpg(car_data, minCity, minHighway) {
+//find all cars in the correct range using two filters
+let underCityRemoved = car_data.filter(car => car.city_mpg >= minCity);
+let filtered = underCityRemoved.filter(car => car.highway_mpg >= minHighway);
 
+//sort by horse power
+filtered.sort((a,b) => {
+    if (a.highway_mpg>b.highway_mpg) {
+        return 1;
+    }
+    if (a.highway_mpg<b.highway_mpg) {
+        return -1;
+    }
+    return 0;
+})
+
+return filtered;
 }
 
 
@@ -46,7 +77,8 @@ export function searchMpg(car_data, minCity, minHighway) {
  * @returns {[]} array of cars
  */
 export function searchName(car_data, searchTerm) {
-
+    let filtered = car_data.filter(car => (car.id.toLowerCase()).includes(searchTerm.toLowerCase()));
+    return filtered;
 }
 
 
@@ -59,5 +91,27 @@ export function searchName(car_data, searchTerm) {
  * @returns {[]} an array of car objects
  */
 export function searchByYear(car_data, years) {
+    /*let filtered = [];
+    for (let i=0; i<years.length; i++) {
+        for (let y=0; y<car_data.length; i++) {
+            if (car_data[y].year = years[i]) {
+                filtered.push(car_data[y]);
+            }
+        }
+    }
+
+    return filtered;*/
+    let filtered = car_data.filter(car => (years.includes(car.year)));
+    filtered.sort((a,b) => {
+        if (a.year>b.year) {
+            return 1;
+        }
+        if (a.year<b.year) {
+            return -1;
+        }
+        return 0;
+    })
+
+    return filtered;
 
 }
